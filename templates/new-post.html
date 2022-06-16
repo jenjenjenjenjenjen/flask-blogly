@@ -11,6 +11,16 @@
     <form method="POST">
         <input type="text" name="title" placeholder="Title">
         <input type="text"  name="content" placeholder="Content">
+        <div name="tag-list">
+            {% for tag in tags %}
+            <div>
+            <input type="checkbox" name="tags" value="{{tag.id}}">
+            <label for="tags">
+                {{tag.name}}
+            </label>
+        </div>
+            {% endfor %}
+        </div>
         <button>Submit</button>
     </form>
 </body>
